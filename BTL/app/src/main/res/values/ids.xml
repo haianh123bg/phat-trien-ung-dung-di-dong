@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="usernameEditText" type="id" />
+    <item name="confirmPasswordEditText" type="id" />
+    <item name="registerButton" type="id" />
+    <item name="loginTextView" type="id" />
+    <item name="motorbikeLicenseTitle" type="id" />
+    <item name="motorbikeLicenseOwner" type="id" />
+    <item name="motorbikeLicenseType" type="id" />
+    <item name="motorbikeLicenseExpiry" type="id" />
+    <item name="carLicenseTitle" type="id" />
+    <item name="carLicenseOwner" type="id" />
+    <item name="carLicenseType" type="id" />
+    <item name="carLicenseExpiry" type="id" />
+    <item name="backButton" type="id" />
+    <item name="selectLicenseText" type="id" />
+    <item name="licenseTypeGroup" type="id" />
+    <item name="radioA1" type="id" />
+    <item name="radioA2" type="id" />
+    <item name="radioB1" type="id" />
+    <item name="radioB2" type="id" />
+    <item name="startDateText" type="id" />
+    <item name="startDateEditText" type="id" />
+</resources>
