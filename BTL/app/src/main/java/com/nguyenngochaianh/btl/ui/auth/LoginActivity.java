@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.nguyenngochaianh.btl.MainActivity;
+import com.nguyenngochaianh.btl.ui.appplication.MainActivity;
 import com.nguyenngochaianh.btl.R;
 import com.nguyenngochaianh.btl.model.User;
 import com.nguyenngochaianh.btl.repository.UserRepository;

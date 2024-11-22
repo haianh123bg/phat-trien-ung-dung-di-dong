@@ -1,7 +1,6 @@
-package com.nguyenngochaianh.btl;
+package com.nguyenngochaianh.btl.ui.appplication;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;

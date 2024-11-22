@@ -1,10 +1,11 @@
-package com.nguyenngochaianh.btl;
+package com.nguyenngochaianh.btl.ui.appplication;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.nguyenngochaianh.btl.R;
 import com.nguyenngochaianh.btl.model.User;
 import com.nguyenngochaianh.btl.repository.UserRepository;
