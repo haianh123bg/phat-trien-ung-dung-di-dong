@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<!--    tools:context=".ds_bao_cao_hoc_phan.DSBaoCaoHocPhan"-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--            style="@style/Widget.MaterialComponents.Toolbar.Primary"-->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarDashboard"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            app:navigationIcon="@drawable/ic_go_back"
+            app:navigationIconTint="@color/white"
+            app:title="Trang chủ" />
+<!--        app:menu="@menu/xem_ds_bcao_hphan_menu"-->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+        <!-- CODE GIAO DIỆN Ở ĐÂY -->
+
+        <LinearLayout
+            android:id="@+id/cardProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_bg_card_profile"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="4">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/avatar" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mã sinh viên: "
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txtMaSinhvien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên sinh viên: "
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txtTenSinhVien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDatLichChamSocXe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/custom_btn_dashboard"
+            android:text="Đặt lịch chăm sóc xe"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/btnDangKyDaoTaoBangLaixe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDatLichChamSocXe"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/custom_btn_dashboard"
+            android:text="Đăng ký đào tạo bằng lái xe"
+            android:textColor="@color/white" />
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btnBaoCaoGiangDay"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/btnDangKyDaoTaoBangLaixe"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:background="@drawable/custom_btn_dashboard"-->
+<!--            android:text="Báo cáo giảng dạy"-->
+<!--            android:textColor="@color/white" />-->
+
+        <Button
+            android:id="@+id/btnThoatTaiKhoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/custom_btn_logout"
+            android:text="Thoát tài khoản"
+            android:textColor="#FF0000" />
+
+    </RelativeLayout>
+
+    <!-- Note: A RecyclerView can also be used -->
+
+</LinearLayout>

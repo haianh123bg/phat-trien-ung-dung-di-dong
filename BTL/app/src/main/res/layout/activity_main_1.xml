@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/background_logo"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="@drawable/custom_logo" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/background_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_fix" />
+
+    <TextView
+        android:id="@+id/tv_school_vi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/background_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:shadowColor="#8A8A89"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_school_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_school_vi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:shadowColor="#8A8A89"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="HỆ THÔNG CHĂM SÓC XE"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_school_en"
+        android:layout_margin="8dp"
+        android:padding="8dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_username_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="3dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="10dp"
+            app:counterEnabled="false"
+            app:counterMaxLength="20"
+            app:errorEnabled="false">
+
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="text"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_password_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_input_username_login"
+            android:paddingLeft="8dp"
+            android:paddingTop="3dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="10dp"
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="false">
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/ckbSaveAccount"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/text_input_password_login"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Save password"-->
+<!--            app:buttonTint="@color/blue" />-->
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_input_password_login"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_btn_dashboard"
+            android:text="Đăng Nhập"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnRegister"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/btnLogIn"-->
+        <!--            android:layout_marginLeft="50dp"-->
+        <!--            android:layout_marginRight="50dp"-->
+        <!--            android:background="@drawable/custom_btn_login"-->
+        <!--            android:text="Đăng Ký"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="17sp" />-->
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:text="Forgot password?"-->
+        <!--            android:textColor="@color/black" />-->
+    </RelativeLayout>
+
+
+</RelativeLayout>
