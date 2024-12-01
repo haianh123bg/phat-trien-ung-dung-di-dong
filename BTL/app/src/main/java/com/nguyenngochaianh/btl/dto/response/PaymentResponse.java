@@ -9,8 +9,8 @@ import lombok.Setter;
 @Setter
 @Getter
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class PaymentResponse {
     private String qrCode;
     private String bankName;
