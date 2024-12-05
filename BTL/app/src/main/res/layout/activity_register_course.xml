@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.appplication.RegisterCourseActivity">
+
+    <!-- Tiêu đề "Đăng ký học bằng lái xe" -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký học bằng lái xe"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Phần chọn loại bằng lái -->
+    <TextView
+        android:id="@+id/selectLicenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Chọn bằng muốn học:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/licenseTypeGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/selectLicenseText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8">
+
+        <RadioButton
+            android:id="@+id/radioA1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A1" />
+
+        <RadioButton
+            android:id="@+id/radioA2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A2" />
+
+        <RadioButton
+            android:id="@+id/radioB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B1" />
+
+        <RadioButton
+            android:id="@+id/radioB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B2" />
+    </RadioGroup>
+
+    <!-- Phần chọn ngày bắt đầu học -->
+    <TextView
+        android:id="@+id/startDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Ngày bắt đầu học:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/licenseTypeGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/startDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Chọn ngày"
+        android:focusable="false"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/startDateText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Nút Đăng ký -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="Đăng ký"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/startDateEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Nút Quay lại -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="Quay lại"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/registerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
