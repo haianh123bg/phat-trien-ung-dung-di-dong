@@ -35,7 +35,7 @@ public class PaymentActivity extends AppCompatActivity {
         ImageView qrCodeImageView = findViewById(R.id.img_qr_code);
 
         // ProgressBar hiển thị trong lúc tải
-        ProgressBar progressBar = findViewById(R.id.);
+        ProgressBar progressBar = findViewById(R.id.progress_bar);
 
         // Hiển thị ProgressBar trước khi bắt đầu tải
         progressBar.setVisibility(View.VISIBLE);
