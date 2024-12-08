@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // Sự kiện khi nhấn nút "Quản lý bằng lái"
         manageLicenseButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, LicenseManagementActivity.class);
+            intent.putExtra("email", currentUser.getEmail());
             startActivity(intent);
         });
 
