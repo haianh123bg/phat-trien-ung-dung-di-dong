@@ -3,4 +3,20 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_return">Quay lại</string>
+    <string name="title_register">Đăng ký</string>
+    <string name="title_confirm">Xác nhận</string>
+    <string name="title_license_plate_number">Biển số xe</string>
+    <string name="title_current_location">Vị trí hiện tại</string>
+    <string name="title_current_state">Tình trạng hiện tại</string>
+    <string name="title_receiving_car">: Toà A2</string>
+    <string name="title_state_car_care_progress">: Đang tiến hành</string>
+    <string name="value_car_id">: %s</string>
+    <string name="title_info_car">Thông tin xe</string>
+    <string name="title_empty_car_care">Chưa có thông tin đăng ký xe</string>
+    <string name="title_register_car_care">Đăng ký bảo dưỡng xe</string>
+
+    <string name="service_wash">Rửa xe</string>
+    <string name="service_oil">Thay dầu</string>
+    <string name="service_hold">Gửi xe</string>
 </resources>

@@ -18,6 +18,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_NOTIFICATION = "Notifications";
     public static final String TABLE_PAYMENT = "Payments";
 
+    public static final String TABLE_CAR_CARE = "CarCares";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -115,6 +117,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE" +
                 ");";
 
+        // Bổ sung bảng DriverLicenses
+        String createCarCareTable = "CREATE TABLE " + TABLE_CAR_CARE + " (" +
+                "car_care_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "car_id TEXT NOT NULL," + // Biển số xe
+                "receiving_location TEXT NOT NULL," + // Nơi nhận xe
+                "receipt_date DATE NOT NULL," + // ngày nhận xe
+                "return_date DATE," + // ngày trả xe / khách nhận xe
+                "status TEXT CHECK(status IN ('DONE', 'PROCESSING', 'CANCELLED')) NOT NULL DEFAULT 'PROCESSING'," + // trạng thái xử lý
+                "registration_service TEXT NOT NULL" + // đăng ký dịch vụ, chuỗi gồm các dịch vụ ngăn cách nhau bởi dấu `,`
+                ");";
+
         // Execute các câu lệnh tạo bảng
         db.execSQL(createUserTable);
         db.execSQL(createCarsTable);
@@ -125,6 +138,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createNotificationsTable);
         db.execSQL(createPaymentsTable);
         db.execSQL(createDriverLicensesTable);
+        db.execSQL(createCarCareTable);
     }
 
     @Override
@@ -138,6 +152,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS UserCourses");
         db.execSQL("DROP TABLE IF EXISTS Notifications");
         db.execSQL("DROP TABLE IF EXISTS Payments");
+        db.execSQL("DROP TABLE IF EXISTS CarCare");
         onCreate(db);
     }
 }
