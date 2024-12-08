@@ -22,6 +22,9 @@
             android:name=".ui.appplication.CarCareInfoActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.appplication.CarCareRegistrationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.appplication.LicenseManagementActivity"
             android:exported="false" /> <!-- Đăng ký LoginActivity -->
         <activity
