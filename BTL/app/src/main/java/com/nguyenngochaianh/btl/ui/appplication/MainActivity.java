@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         manageLicenseButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, LicenseManagementActivity.class);
             intent.putExtra("email", currentUser.getEmail());
+            intent.putExtra("userId", currentUser.getUserId());
             startActivity(intent);
         });
 
