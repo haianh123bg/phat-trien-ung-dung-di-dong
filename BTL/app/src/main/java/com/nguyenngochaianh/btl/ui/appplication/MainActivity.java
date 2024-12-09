@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         userRepository = new UserRepository(this);
         userRepository.open();
 
-        // Lấy email người dùng từ Intent
+        // Lấy email người dùng
         String email = getIntent().getStringExtra("email");
         currentUser = userRepository.getUserByEmail(email);
 

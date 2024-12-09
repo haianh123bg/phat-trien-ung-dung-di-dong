@@ -3,6 +3,7 @@ package com.nguyenngochaianh.btl.ui.appplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,8 +27,10 @@ public class CarCareInfoActivity extends AppCompatActivity {
     private ActivityCarCareInfoBinding binding;
     private CarCareAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         binding = ActivityCarCareInfoBinding.inflate(getLayoutInflater());
@@ -49,6 +52,10 @@ public class CarCareInfoActivity extends AppCompatActivity {
 
         binding.registerCarCareButton.setOnClickListener(v -> {
             startActivity(new Intent(CarCareInfoActivity.this, CarCareRegistrationActivity.class));
+        });
+
+        binding.paymentCarCareButton.setOnClickListener(v -> {
+            startActivity(new Intent(CarCareInfoActivity.this, PaymentActivity.class));
         });
     }
 

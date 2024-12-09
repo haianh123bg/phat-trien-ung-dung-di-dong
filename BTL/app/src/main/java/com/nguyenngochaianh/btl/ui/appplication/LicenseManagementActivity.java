@@ -24,7 +24,7 @@ public class LicenseManagementActivity extends AppCompatActivity {
 
     private TextView motorbikeLicenseOwner, motorbikeLicenseType, motorbikeLicenseExpiry;
     private TextView carLicenseOwner, carLicenseType, carLicenseExpiry;
-    private Button registerButton, backButton;
+    private Button registerButton, backButton, paymentButton;
     private DriverLicensesRepository driverLicensesRepos;
     List<DriverLicense> listLicense;
     DriverLicense licenseMoto;
@@ -88,6 +88,7 @@ public class LicenseManagementActivity extends AppCompatActivity {
         carLicenseExpiry = findViewById(R.id.carLicenseExpiry);
         registerButton = findViewById(R.id.registerButton);
         backButton = findViewById(R.id.backButton);
+        paymentButton = findViewById(R.id.paymentButton);
 
         // Cập nhật giao diện ban đầu
         onResume();  // Gọi onResume để cập nhật giao diện ngay khi Activity được tạo
@@ -105,7 +106,14 @@ public class LicenseManagementActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
+        // Sự kiện cho nút Thanh toán
+        paymentButton.setOnClickListener(v -> {
+            Intent intent = new Intent(LicenseManagementActivity.this, PaymentActivity.class);
+            startActivity(intent);
+            finish();
+        });
+        }
     }
 
 
-}

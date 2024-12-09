@@ -1,10 +1,13 @@
 package com.nguyenngochaianh.btl.ui.appplication;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -22,9 +25,13 @@ import com.nguyenngochaianh.btl.R;
 import java.lang.annotation.Target;
 
 public class PaymentActivity extends AppCompatActivity {
+    private Button backButton, submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        backButton = findViewById(R.id.btn_back);
+        submitButton = findViewById(R.id.btn_submit_payment);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
 
@@ -64,5 +71,21 @@ public class PaymentActivity extends AppCompatActivity {
                     }
                 })
                 .into(qrCodeImageView);
+
+//        // Sự kiện cho nút Quay lại
+//        backButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
+//            startActivity(intent);
+//            finish();
+//        });
+//
+//        // Sự kiện cho nút Xác nhận thanh toán hiển thị thông báo thanh toán thành công
+//        submitButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
+//            Toast.makeText(PaymentActivity.this, "Thanh toán thành công", Toast.LENGTH_LONG).show();
+//            startActivity(intent);
+//            finish();
+//        });
+        }
+
     }
-}
