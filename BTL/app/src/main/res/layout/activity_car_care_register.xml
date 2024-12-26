@@ -189,4 +189,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
