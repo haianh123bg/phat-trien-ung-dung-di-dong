@@ -23,8 +23,8 @@ public class EmailService {
     private static final String SMTP_PORT = "587";
 
     // Địa chỉ và mật khẩu Gmail (nên lấy thông tin này từ môi trường an toàn, không hard-code)
-    private static final String USERNAME = "nguyenngochaianh33@gmail.com";
-    private static final String PASSWORD = "gnsn tydz vhwl cbun";
+    private static final String USERNAME = "notification@redai.vn";
+    private static final String PASSWORD = "ywek pmty crwp yeao";
 
     private static ExecutorService executorService = Executors.newSingleThreadExecutor(); // Executor service to run tasks in background
 
@@ -39,9 +39,7 @@ public class EmailService {
                     properties.put("mail.smtp.host", SMTP_HOST);
                     properties.put("mail.smtp.port", SMTP_PORT);
                     properties.put("mail.smtp.auth", "true");
-                    properties.put("mail.smtp.socketFactory.port", SMTP_PORT);
-                    properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-                    properties.put("mail.smtp.socketFactory.fallback", "false");
+                    properties.put("mail.smtp.starttls.enable", "true"); // Bật STARTTLS
 
                     // Khởi tạo phiên làm việc mail với tên người dùng và mật khẩu
                     Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
@@ -56,7 +54,7 @@ public class EmailService {
                     message.setFrom(new InternetAddress(USERNAME));
                     message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
                     message.setSubject(subject);
-                    message.setText(body);
+                    message.setContent(body, "text/html; charset=utf-8"); // Thiết lập nội dung HTML
 
                     // Gửi email
                     Transport.send(message);
