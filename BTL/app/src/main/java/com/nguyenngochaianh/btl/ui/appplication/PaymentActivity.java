@@ -7,14 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -22,15 +18,12 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.nguyenngochaianh.btl.R;
 
-import java.lang.annotation.Target;
-
 public class PaymentActivity extends AppCompatActivity {
-    private Button backButton, submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        backButton = findViewById(R.id.btn_back);
-        submitButton = findViewById(R.id.btn_submit_payment);
+        Button backButton = findViewById(R.id.btn_back);
+        Button submitButton = findViewById(R.id.btn_submit_payment);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
@@ -72,20 +65,26 @@ public class PaymentActivity extends AppCompatActivity {
                 })
                 .into(qrCodeImageView);
 
-//        // Sự kiện cho nút Quay lại
-//        backButton.setOnClickListener(v -> {
-//            Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
-//            startActivity(intent);
-//            finish();
-//        });
-//
-//        // Sự kiện cho nút Xác nhận thanh toán hiển thị thông báo thanh toán thành công
-//        submitButton.setOnClickListener(v -> {
-//            Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
-//            Toast.makeText(PaymentActivity.this, "Thanh toán thành công", Toast.LENGTH_LONG).show();
-//            startActivity(intent);
-//            finish();
-//        });
-        }
+        // Sự kiện cho nút Quay lại
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        });
 
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Thông báo");
+        alertDialogBuilder.setMessage("Thanh toán thành công");
+        alertDialogBuilder.setPositiveButton("OK", (dialog, which) -> {
+            // Handle OK button click
+        });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+
+        // Sự kiện cho nút Xác nhận thanh toán hiển thị thông báo thanh toán thành công
+        submitButton.setOnClickListener(v -> {
+            alertDialog.show();
+        });
     }
+
+}
